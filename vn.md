@@ -1,19 +1,11 @@
 # Cách nào để viết CSS có thể mở rộng và bảo trì? Đây chính là điều mà mỗi front-end developer đều băn khoăn. ITCSS có câu trả lời?
 
-Năm ngoái, khi chúng tôi bắt đầu thưc hiện kế hoạch [HEROized](http://www.heroized.com) để thiết kế lại và tạo mới website Xfive.co, tôi đã tìm kiếm kiến trúc CSS cho phép dễ dàng phát triển và bảo trì sau này.
-Last year when we started to plan our [HEROized](http://www.heroized.com) redesign and new Xfive.co website, I was looking for a CSS architecture which would allow for easy website development and further maintenance.
+Năm ngoái, khi chúng tôi bắt đầu thưc hiện kế hoạch thiết kế lại [HEROized](http://www.heroized.com) và tạo thiết kế mới cho website Xfive.co, tôi đã tìm kiếm kiến trúc CSS cho phép dễ dàng phát triển và bảo trì sau này.
 
 [CSS Modules](https://www.sitepoint.com/understanding-css-modules-methodology/) khá là mới và lạ lẫm vào thời điểm đó và tôi luôn
 cân nhắc (PHÂN VÂN)... Sau đó tôi có đọc bài viết ITCSS của [Harry Roberts](https://csswizardry.com/) trên [báo mạng](https://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731).
-được phát hành hôm 6/2015. Và ngay lập tức tôi đã bị thuyết phục với cách tiếp cận CSS đơn giản từ dưới nên trên trong này.
+được phát hành hôm 6/2015. Và ngay lập tức tôi đã bị thuyết phục với cách tiếp cận CSS đơn giản từ dưới nên trên này.
  
-[CSS Modules](https://www.sitepoint.com/understanding-css-modules-methodology/) 
-were quite young and exotic at that time and I’ve always considered the 
-[Atomic Design](http://patternlab.io/) chemistry analogy to be a bit artificial. 
-Then I came across [Harry Roberts’s](https://csswizardry.com/) ITCSS in the June 
-2015 issue of the [net magazine](https://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731) 
-and immediately fell in love with this simple, down to earth CSS approach.
-
 ## ITCSS là gì?
 
 ITCSS viết tắt của `Inverted Triangle CSS` và nó giúp bạn có thể tổ chức các file CSS trong project của mình
@@ -21,7 +13,7 @@ theo cách nào đó để có thể **giải quyết các vấn đề** (không
  
 ITCSS có thể được dùng mà không bắt buộc cần có các bộ tiền xử lý và nó cũng tương thích với các cách logic để viết CSS như BEM, SMACSS hay OOCSS.
 
-Một trong những nguyên tắc chính của ITCSS là nó tách biệt giữa codebase và các thành phần khác (được gọi là các `layer`), nó có hình dạng của một tam giác ngược: 
+Một trong những nguyên tắc chính của ITCSS là nó tách codebase thành các thành phần khác nhau riêng lẻ(được gọi là các `layer`), nó có hình dạng của một tam giác ngược: 
 
 ![img](https://www.xfivecdn.com/xfive/wp-content/uploads/2016/02/01083650/itcss-layers2.svg)
 
@@ -38,7 +30,6 @@ Các layer:
 Tam giác này cũng thể hiện các style mà các selector quy định ...: từ cái chung đến cái riêng, từ các selector có chỉ định mức độ cụ thể style thấp đến các
 selector chỉ định mức độ cụ thể hơn (nhưng không quá cụ thể, ID không được phép) và từ thành phần dùng mang tính tổng quát cao đến các thành phần cụ thể trong các trường hợp. 
 
-
 ![img2](https://www.xfivecdn.com/xfive/wp-content/uploads/2016/02/10154630/itcss-key-metrics.svg)
 
 Việc tổ chức code CSS giúp bạn có thể tránh được các xung đột và được thể hiện rõ trong [đồ thị đặc trưng](https://jonassebastianohlsson.com/specificity-graph).
@@ -47,11 +38,10 @@ Việc tổ chức code CSS giúp bạn có thể tránh được các xung đ�
 
 Cập nhật ngày 27/10/2016: tờ báo đã phát hành lại bài viết ban đầu trên báo in.
 
-Theo thường lê, tôi sẽ giới thiệu tới bạn website [ITCSS webpage](https://itcss.io) để học hỏi. Tuy nhiên, nó không có bất kỳ thứ gì cả, kể cả tài liệu tham khảo.
+Theo thường lê, tôi sẽ giới thiệu tới bạn website [ITCSS webpage](https://itcss.io) để tìm hiểu thêm. Tuy nhiên, nó không có bất kỳ thứ gì cả, kể cả tài liệu tham khảo.
 
-ITCSS có chứa bản quyền nên nếu bạn muốn sử dụng toàn bộ nó thì bạn nên đọc phần giới thiệu trong tạp chí. Tôi không ở đây để bàn luận về mục đích
+ITCSS thuộc sở hữu độc quyền nếu bạn muốn sử dụng toàn bộ nó thì bạn nên đọc phần giới thiệu trong tạp chí. Tôi không ở đây để bàn luận về mục đích
 của tác giả bài viết (tôi biết ơn vì anh ấy đã chia sẻ kiến thức của mình), nhưng theo tôi nghĩ điều đó để hạn chế việc ITCSS bị áp dụng rộng rãi (đó có thể là mục đích chính).
-
 
 ```
 " Tính độc quyền của ITCSS hạn chế việc nó được áp dụng rộng rãi
@@ -60,7 +50,7 @@ của tác giả bài viết (tôi biết ơn vì anh ấy đã chia sẻ kiến
 Điều đó không ngăn cản việc bạn bắt đầu sự dụng nó trong project của mình, nếu thich thú hãy làm nó ngay. [Truy cập bài viết](https://www.myfavouritemagazines.co.uk/design/net-magazine-back-issues/)
 để tìm hiểu các nguyên tắc cơ bản của ITCSS và sau đó nghiên cứu các ví dụ, tài liệu online để giúp bạn áp dụng nó vào trong project thực tế.
 
-## Tài nguyên
+## Nguồn tài nguyên
 
 Tôi đã sử dụng ITCSS trong 4 project và cả những cái sau này nữa (bao gồm cả Xfive.co). Dưới đây là các nguồn tài liệu giúp tôi hiểu rõ hơn về ITCSS:
 
@@ -78,7 +68,7 @@ Tôi đã sử dụng ITCSS trong 4 project và cả những cái sau này nữa
 - [inuitcss](https://github.com/inuitcss/inuitcss) – Framework 00CSS xây dụng dựa vào ITCSS và nó đưa ra nhiều khái niệm và các tính năng nâng cao hơn.
 - [The BEMIT naming convention](http://www.jamesturneronline.net/blog/bemit-naming-convention.html)
 
-Bạn có thể theo dõi[Chisel](https://github.com/xfiveco/generator-chisel/), nhà sáng lập Yeoman của cho các dự án front-end của WordPress, nó có hỗ trợ ITCSS.
+Bạn có thể theo dõi[Chisel](https://github.com/xfiveco/generator-chisel/), nhà sáng lập ra Yeoman cho các dự án front-end của WordPress, nó có hỗ trợ ITCSS.
 
 ##Trải nghiệm
 
@@ -169,13 +159,7 @@ và nạp stylesheets được thêm mới một cách tự động trong [Chise
 ### Các object có khả năng tái sử dụng cho việc phát triển nhanh chóng
 
 Các object của ITCSS là đối tượng hoàn hảo để xây dựng thư viện chứa các component có thể tái sử dụng cho phép xây dụng front-end nhanh chóng.
-Các thành phần UI khi đó sẽ bao gồm các object dùng chung và các componet cụ thể trong project. Ví dụ, (innuitcss) như là một frameworm dựa trên ITCSS, nó bao gồm tập hợp các đối tượng nhưng chỉ là một component mẫu
-
-ITCSS’ objects are perfect candidates for building a library of reusable components 
-to allow fast front-end development. UI parts would then be composed of generic 
-objects and project specific components. For example, innuitcss as a generic ITCSS 
-based framework contains [a bunch of objects](https://github.com/inuitcss/inuitcss/tree/develop/objects)
-but only [one sample component](https://github.com/inuitcss/inuitcss/tree/develop/components).
+Các thành phần UI khi đó sẽ bao gồm các object dùng chung và các componet cụ thể trong project. Ví dụ, (innuitcss) như là một frameworm dựa trên ITCSS, nó bao gồm [tập hợp các đối tượng](https://github.com/inuitcss/inuitcss/tree/develop/objects) nhưng chỉ là [một component mẫu](https://github.com/inuitcss/inuitcss/tree/develop/components)
 
 ### Hiệu ứng
 
