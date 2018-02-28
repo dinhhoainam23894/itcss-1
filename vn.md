@@ -1,17 +1,17 @@
-# Cách nào để viết CSS có thể mở rộng và bảo trì? Đây chính là điều mà mỗi front-end developer đều băn khoăn. ITCSS có câu trả lời?
+# ~~Cách nào~~ (Làm thế nào - How do) để viết CSS có thể mở rộng và bảo trì? Đây chính là điều mà mỗi front-end developer đều băn khoăn. ITCSS có câu trả lời?
 
 Năm ngoái, khi chúng tôi bắt đầu thưc hiện kế hoạch thiết kế lại [HEROized](http://www.heroized.com) và tạo thiết kế mới cho website Xfive.co, tôi đã tìm kiếm kiến trúc CSS cho phép dễ dàng phát triển và bảo trì sau này.
 
 [CSS Modules](https://www.sitepoint.com/understanding-css-modules-methodology/) khá là mới và lạ lẫm vào thời điểm đó và tôi luôn
 cân nhắc (PHÂN VÂN)... Sau đó tôi có đọc bài viết ITCSS của [Harry Roberts](https://csswizardry.com/) trên [báo mạng](https://www.creativebloq.com/web-design/manage-large-scale-web-projects-new-css-architecture-itcss-41514731).
-được phát hành hôm 6/2015. Và ngay lập tức tôi đã bị thuyết phục với cách tiếp cận CSS đơn giản từ dưới nên trên này.
+được phát hành hôm 6/2015. Và ngay lập tức tôi đã bị thuyết phục với cách tiếp cận CSS ~~đơn giản từ dưới nên trên này~~ ( đơn giản đến thế này down to earth).
  
 ## ITCSS là gì?
 
 ITCSS viết tắt của `Inverted Triangle CSS` và nó giúp bạn có thể tổ chức các file CSS trong project của mình
 theo cách nào đó để có thể **giải quyết các vấn đề** (không phải tất cả đêu giải quyết được) với CSS cụ thể như **các thuộc tính global namespace, cascade, và các selector.**
  
-ITCSS có thể được dùng mà không bắt buộc cần có các bộ tiền xử lý và nó cũng tương thích với các cách logic để viết CSS như BEM, SMACSS hay OOCSS.
+~~ITCSS có thể được dùng mà không bắt buộc cần có các bộ tiền xử lý~~ (ITCSS có thể được sử dụng với bộ tiền xử lý hoặc không cần chúng - ITCSS can be used with preprocessors or without) và nó cũng tương thích với các cách logic để viết CSS như BEM, SMACSS hay OOCSS.
 
 Một trong những nguyên tắc chính của ITCSS là nó tách codebase thành các thành phần khác nhau riêng lẻ(được gọi là các `layer`), nó có hình dạng của một tam giác ngược: 
 
@@ -38,7 +38,7 @@ Việc tổ chức code CSS giúp bạn có thể tránh được các xung đ�
 
 Cập nhật ngày 27/10/2016: tờ báo đã phát hành lại bài viết ban đầu trên báo in.
 
-Theo thường lê, tôi sẽ giới thiệu tới bạn website [ITCSS webpage](https://itcss.io) để tìm hiểu thêm. Tuy nhiên, nó không có bất kỳ thứ gì cả, kể cả tài liệu tham khảo.
+Theo thường lê, tôi sẽ giới thiệu tới bạn website [ITCSS webpage](https://itcss.io) để tìm hiểu thêm. ~~Tuy nhiên, nó không có bất kỳ thứ gì cả, kể cả tài liệu tham khảo~~ .(Tuy nhiên, không có gì giống như tài liệu mã nguồn mở tồn tại - However, nothing like open source documentation exists)
 
 ITCSS thuộc sở hữu độc quyền nếu bạn muốn sử dụng toàn bộ nó thì bạn nên đọc phần giới thiệu trong tạp chí. Tôi không ở đây để bàn luận về mục đích
 của tác giả bài viết (tôi biết ơn vì anh ấy đã chia sẻ kiến thức của mình), nhưng theo tôi nghĩ điều đó để hạn chế việc ITCSS bị áp dụng rộng rãi (đó có thể là mục đích chính).
